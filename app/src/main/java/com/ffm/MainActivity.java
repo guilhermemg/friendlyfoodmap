@@ -7,6 +7,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
@@ -80,20 +81,30 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        AlertDialog dialog = builder.create();
+
         if (id == R.id.nav_fish) {
-            // Handle the camera action
+            dialog.setMessage("Fish Clicked");
+            dialog.show();
         } else if (id == R.id.nav_shrimp) {
-
+            dialog.setMessage("Shrimp Clicked");
+            dialog.show();
         } else if (id == R.id.nav_egg) {
-
+            dialog.setMessage("Egg Clicked");
+            dialog.show();
         } else if (id == R.id.nav_wheat) {
-
+            dialog.setMessage("Wheat Clicked");
+            dialog.show();
         } else if (id == R.id.nav_milk) {
-
+            dialog.setMessage("Milk Clicked");
+            dialog.show();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
+
 }
