@@ -21,11 +21,9 @@
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/nav_header_main"
         app:menu="@menu/activity_main_drawer"
-        android:paddingTop="50dp"
+        android:paddingTop="56dp"
         android:paddingLeft="0dp"
         android:paddingRight="0dp"
         android:paddingBottom="0dp" />
-
-
 
 </android.support.v4.widget.DrawerLayout>

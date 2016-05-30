@@ -8,11 +8,12 @@
          location permissions for the 'MyLocation' functionality. 
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="Friendly Food Map"
+        android:label="Safe Food"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
 
@@ -26,19 +27,20 @@
         -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyB9Vj7owTrepDWfY2V2yvmjmTbmhT8C0ZM" />
+            android:value="AIzaSyB9Vj7owTrepDWfY2V2yvmjmTbmhT8C0ZM"
+            />
 
         <activity
             android:name=".MainActivity"
-            android:label="@string/title_activity_main">
+            android:label="Safe Food">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".MapsActivity"
-            android:label="@string/title_activity_maps"></activity>
+        <!--<activity-->
+            <!--android:name=".MapsActivity"-->
+            <!--android:label="@string/title_activity_maps"></activity>-->
     </application>
 
 </manifest>

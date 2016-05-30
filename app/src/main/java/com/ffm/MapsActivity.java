@@ -1,6 +1,10 @@
 package com.ffm;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -10,7 +14,10 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+@Deprecated
 public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback {
+
+    private static final int LOCATION_PERMISSION_REQUEST_CODE = 1;
 
     private GoogleMap mMap;
 
@@ -20,10 +27,22 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
         setContentView(R.layout.activity_maps);
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.map);
-        mapFragment.getMapAsync(this);
-
+//        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+//                .findFragmentById(R.id.map);
+//        mapFragment.getMapAsync(this);
+//
+//        mMap = ((SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map)).getMap();
+//
+//        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION)
+//                == PackageManager.PERMISSION_GRANTED) {
+//            mMap.setMyLocationEnabled(true);
+//        } else {
+//            // Uncheck the box until the layer has been enabled and request missing permission.
+//            PermissionUtils.requestPermission(this, LOCATION_PERMISSION_REQUEST_CODE,
+//                    Manifest.permission.ACCESS_FINE_LOCATION, false);
+//            mMap.setMyLocationEnabled(true);
+//        }
+//        mMap.setMyLocationEnabled(true);
     }
 
     /**
